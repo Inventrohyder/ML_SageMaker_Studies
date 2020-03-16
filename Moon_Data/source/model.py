@@ -15,6 +15,12 @@ class SimpleNet(nn.Module):
         super(SimpleNet, self).__init__()
         
         # define all layers, here
+        self.fc1 = nn.Linear(input_dim, hidden_dim)
+        self.fc2 = nn.Linear(hidden_dim, output_dim)
+        self.drop = nn.Dropout(0.3)
+        
+        # Sigmoid layer
+        self.sig = nn.Sigmoid()
         
     
     ## TODO: Define the feedforward behavior of the network
