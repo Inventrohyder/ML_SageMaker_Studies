@@ -169,8 +169,8 @@ if __name__ == '__main__':
     save_model_params(model, args.model_dir)
 
     ## TODO: Define an optimizer and loss function for training
-    optimizer = None
-    criterion = None
+    optimizer = optim.Adam(model.parameters(), lr=args.lr)
+    criterion = torch.nn.BCELoss()
 
     
     # Trains the model (given line of code, which calls the above training function)
