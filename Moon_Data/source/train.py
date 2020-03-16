@@ -140,7 +140,12 @@ if __name__ == '__main__':
   
     ## TODO: Add args for the three model parameters: input_dim, hidden_dim, output_dim
     # Model parameters
-
+    parser.add_argument('--input_dim', type=int, default=2, metavar='IN',
+                        help='number of inputs to the model (default: 2)')
+    parser.add_argument('--hidden_dim', type=int, default=10, metavar='H',
+                        help='number of hidden layers of the model (default: 10)')
+    parser.add_argument('--output_dim', type=int, default=1, metavar='OUT',
+                        help='number of outputs of the model (default: 5)')
     
     args = parser.parse_args()
 
